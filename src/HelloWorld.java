@@ -40,7 +40,7 @@ public class HelloWorld {
 
 
 //Change your code to assign the value 123L (Note the 'L' at the end) to myNumber.
-        myNumber = 123L;
+//        myNumber = 123L;
 //this works because its a LONG and matching data types
 
 
@@ -115,7 +115,7 @@ public class HelloWorld {
 //        int y = 4;
 //        y = y * x;
 
-        y *= x;
+//        y *= x;
 //------------------------------
 
 //        int x = 10;
@@ -123,8 +123,8 @@ public class HelloWorld {
 //        x = x / y;
 //        y = y - x;
 
-            x /= y;
-            y -= x;
+//            x /= y;
+//            y -= x;
 
 
 //----------------------------------
