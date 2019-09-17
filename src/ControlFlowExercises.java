@@ -3,23 +3,24 @@ import java.util.Scanner;
 public class ControlFlowExercises {
 
    public static void main (String[] args) {
-    //TABLE OF POWERS
-      Scanner input = new Scanner(System.in);
+    //GRADES
+      Scanner grade = new Scanner(System.in);
+       System.out.println("Enter grade");
+       int grades = grade.nextInt();
 
-       System.out.println("Enter a number");
-       int startValue = 1;
-       int num = input.nextInt();
-       for (int row =0; row < num; row++){
-              int y = 1;
-           for (int col = startValue; col < startValue+3; col ++)
-           {
-               y = y *startValue;
-               System.out.print(y + " " );
-           }
-           System.out.println();
-           startValue++;
+       if (grades >= 88) {
+           System.out.println("You received an A");
+       } else if (grades >= 87) {
+           System.out.println("You received a B");
+       } else if (grades >= 79) {
+           System.out.println("You received a C");
+       } else if (grades >= 66) {
+           System.out.println("You received a D");
+       } else {
+           System.out.println("You received an F");
        }
 
-       }
+   }
+
 
 }
