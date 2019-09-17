@@ -1,15 +1,19 @@
 import java.util.Scanner;
+
 public class ConsoleExercises {
     public static void main (String[] args){
-//        double pi = 3.14159;
-//        System.out.format("The Value of pi is approximately %.4s", pi);
-
         Scanner user = new Scanner(System.in);
+
+//
+//        double pi = 3.14159;
+//        System.out.format("The Value of pi is approximately %.2f.", pi);
+//
 //        System.out.print("Enter an  integer");
 //        int userInput = user.nextInt();
 //        System.out.println("You entered " + userInput);
-        //What happens if you input something that is not an integer?
-        //You get an error
+//        What happens if you input something that is not an integer?
+//        You get an error
+        // you can test your code by saying  System.out.println(userInput === 45);...you would get true or false;
 
 //        System.out.println("Enter 3 words");
 //        String firstWord = user.next();
@@ -18,6 +22,8 @@ public class ConsoleExercises {
 //        System.out.println("First word: " + firstWord);
 //        System.out.println("Second word: " + secondWord);
 //        System.out.println("Third word: " + thirdWord);
+// or shorter way
+//        System.out.print(firstWord + "\n" + secondWord+ "\n" + thirdWord);
 
         //What happens if you enter less than 3 words?
         //It will not continue until you enter in a third word
@@ -37,21 +43,35 @@ public class ConsoleExercises {
         //Now i got the full sentence
 
         System.out.println("Enter length");
-        String value1 = user.nextLine();
-        int length = Integer.parseInt(value1);
+        int length = Integer.parseInt(user.nextLine());
 
         System.out.println("Enter width");
-        String value2 = user.nextLine();
-        int width = Integer.parseInt(value2);
+        int width = Integer.parseInt(user.nextLine());
 
         System.out.println("Length:" + length);
         System.out.println("Width:" + width);
 
-        System.out.println("area:" + (length * width));
-        System.out.println("perimeter:" + (length * 2) + (width *2));
+        int area = length * width;
+        int perimeter = (length * 2) + (width *2);
+//
+        System.out.println("area:" + area);
+        System.out.println("perimeter:" + perimeter);
+//        we can test out code with this if we enters 2 for width and 2 for length
+//        System.out.println(area == 4);
+//        System.out.println(perimeter == 8);
+
 
         //Bonus///
 
+//        System.out.println("Enter length");
+//        double length = Double.parseDouble(user.nextLine());
+//
+//        System.out.println("Enter width");
+//        double width = Double.parseDouble(user.nextLine());
+//        double perimeter = (length * 2) + (width *2);
+//        double area = (length * width);
+//
+//        System.out.println("The area is: " + area + "The perimeter is: " + perimeter);
 
 
 
