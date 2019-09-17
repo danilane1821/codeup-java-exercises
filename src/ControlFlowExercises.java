@@ -1,24 +1,25 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 
    public static void main (String[] args) {
-    //FIZZBUZZ
+    //TABLE OF POWERS
+      Scanner input = new Scanner(System.in);
 
-//       for(int i = 1; i <= 100; i++){
-//           System.out.println(i);
-//       }
-
-       for(int i = 1; i <= 100; i++){
-            if(i == 15){
-                System.out.println("FIZZBUZZ");
-            }else if(i % 3 == 0){
-                System.out.println("FIZZ");
-            }else if(i % 5 == 0){
-                System.out.println("BUZZ");
-            }else{
-                System.out.println(i);
-            }
+       System.out.println("Enter a number");
+       int startValue = 1;
+       int num = input.nextInt();
+       for (int row =0; row < num; row++){
+              int y = 1;
+           for (int col = startValue; col < startValue+3; col ++)
+           {
+               y = y *startValue;
+               System.out.print(y + " " );
+           }
+           System.out.println();
+           startValue++;
        }
 
+       }
 
-   }
 }
