@@ -94,13 +94,13 @@ public class HelloWorld {
 //        int three = (int) o;
 //        System.out.println(o);
 
-        // you get an error because the string cant be cast to a class.
+        // you get an error because the string cant be cast to a class of int.
 
 
 //How is the above example different from the code block below?
 //        int three = (int) "three";
 
-//idk
+// you can not cast an int to a string and the intentions are clear.. not a much as the above code because of the object
 
 
 // Rewrite the following expressions using the relevant shorthand assignment operators:
