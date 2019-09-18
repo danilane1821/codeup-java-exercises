@@ -12,7 +12,7 @@ public class Bob {
                 System.out.println("sure..");
             } else if (saySomething.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
-            } else if (saySomething.equals("")) {
+            } else if (saySomething.isEmpty()) {
                 System.out.println("Fine. Be that way!");
             } else {
                 System.out.println("Whatever..");
