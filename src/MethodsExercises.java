@@ -35,21 +35,25 @@ public class MethodsExercises {
 
     public static double modulus (double num1, double num2){
         return num1 % num2;
-        //if we divide by 0 we get NaN...we should get...
+
     }
 
     // problem 2
 
     public static int getInteger(int min, int max) {
         Scanner input = new Scanner(System.in);
+//        System.out.println(input.hasNextInt());
+        int numInput = input.nextInt();
 
-        if(input.hasNextInt() && !input.hasNextDouble() && !input.hasNextFloat()) {
-            System.out.println("Lets check to see if its between 1 and 10");
-        }else{
-            System.out.println("That is not a valid number");
 
+        if(numInput >= min && numInput <= max){
+            System.out.println("That number is between 1 and 10");
+        }else if(numInput < min || numInput > max){
+            System.out.println("Please enter a valid number");
+            getInteger(min, max);
         }
         return min + max;
+
     }
 
 
