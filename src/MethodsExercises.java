@@ -64,31 +64,18 @@ public class MethodsExercises {
     public static int factorial() {
         int number = getInteger(1, 10);
 
-//        int n=5,fact=1;
-//
-//        for(int i=1;i<=n;i++)
-//        {
-//
-//            fact=fact*i;
-//        }
-//
-//        System.out.println("factoral="+fact);
-//        return 0;
-
-
         int startValue = 1;
         String middleString = "";
         for (int i = 1; i <=number; i++) {
             startValue *= i;
-            System.out.println(middleString);
+//            System.out.println(middleString);
             if(middleString.isEmpty()){
                 middleString += i;
             }else {
                 middleString += " X " + i;
             }
-            System.out.println(middleString);
+            System.out.println(i + "! = " + middleString + " = " + startValue);
         }
-
         return 0;
     }
 
