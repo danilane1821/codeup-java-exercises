@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodsExercises {
 
@@ -11,8 +12,10 @@ public class MethodsExercises {
         System.out.println(modulus(2, 4));
 
         System.out.print("Enter a number between 1 and 10: ");
-//        int userInput = getInteger(1, 10);
+        int userInput = getInteger(1, 10);
         System.out.println(factorial());
+        rollDice();
+
     }
 
 
@@ -37,7 +40,7 @@ public class MethodsExercises {
 
     }
 
-    // problem 2
+// problem 2
 
     public static int getInteger(int min, int max) {
         Scanner input = new Scanner(System.in);
@@ -50,12 +53,11 @@ public class MethodsExercises {
                 System.out.println("This number is not valid, enter another number: ");
                 return getInteger(min, max);
             }
-//        getInteger(1,10); if you leave it here it continues to run
         } else {
             System.out.println("not a valid input! Enter a valid number: ");
 
         }
-        return getInteger(min, max);
+        return 0;
     }
 
 
@@ -68,7 +70,6 @@ public class MethodsExercises {
         String middleString = "";
         for (int i = 1; i <=number; i++) {
             startValue *= i;
-//            System.out.println(middleString);
             if(middleString.isEmpty()){
                 middleString += i;
             }else {
@@ -77,6 +78,25 @@ public class MethodsExercises {
             System.out.println(i + "! = " + middleString + " = " + startValue);
         }
         return 0;
+    }
+
+
+//problem 4
+
+
+    public static void rollDice () {
+        Scanner diceSide = new Scanner(System.in);
+        System.out.println("How many dice sides would you like?");
+        int dice = Integer.parseInt(diceSide.nextLine());
+        int diceRoll1 = (int) (dice*Math.random()+1);
+        int diceRoll2 = (int) (dice*Math.random()+1);
+        System.out.println("You rolled " + diceRoll1 + " and then " + diceRoll2);
+        System.out.println("Would you like to roll again? Y/N");
+        String response = diceSide.nextLine();
+        if(response.equalsIgnoreCase("y")){
+            rollDice();
+        }
+
     }
 
 }
