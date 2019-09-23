@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ConsoleExercises {
-    public static void main (String[] args){
+    public static void main(String[] args) {
         Scanner user = new Scanner(System.in);
 
 //
@@ -52,7 +52,7 @@ public class ConsoleExercises {
         System.out.println("Width:" + width);
 
         int area = length * width;
-        int perimeter = (length * 2) + (width *2);
+        int perimeter = (length * 2) + (width * 2);
 //
         System.out.println("area:" + area);
         System.out.println("perimeter:" + perimeter);
@@ -74,9 +74,32 @@ public class ConsoleExercises {
 //        System.out.println("The area is: " + area + "The perimeter is: " + perimeter);
 
 
-
-
-
-
     }
+
+
+//    public static int fizzBuzzLoop(int i) {
+//
+//        if (i % 3 == 0 && i % 5 == 0) {
+//            System.out.println("FizzBuzz");
+//        } else if (i % 3 == 0) {
+//            System.out.println("Fizz");
+//        } else if (i % 5 == 0) {
+//            System.out.println("Buzz");
+//        } else {
+//            System.out.println(i);
+//        }
+//        if (i == 100) {
+//            return 0;
+//        } else {
+//            return fizzBuzzLoop(i + 1);
+//        }
+//    }
+
+
+
+
+
+
+
+
 }
