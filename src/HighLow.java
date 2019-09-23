@@ -18,24 +18,25 @@ public class HighLow {
         Scanner guessed = new Scanner(System.in);
         double num = (int) getRandomIntegerBetweenRange(1, 100);
         System.out.println("Please guess the random number between 1 and 100");
-        int secondResponse = guessed.nextInt();
-        int guessCount = 0;
-        int guessLimit = 10;
+        int response = guessed.nextInt();
+        int guessCount = 1;
+        int guessLimit = 3;
         boolean outOfGuesses = false;
 
-        while (secondResponse != num) {
+        while (response != num) {
             if (guessCount < guessLimit) {
-                if (secondResponse < num) {
+                if (response < num) {
                     System.out.println("HIGHER!");
                     System.out.println("Guess again");
-                    secondResponse = guessed.nextInt();
+                    response = guessed.nextInt();
                     guessCount++;
 
-                } else if (secondResponse > num) {
+                } else if (response > num) {
                     System.out.println("LOWER!");
                     System.out.println("Guess again");
-                    secondResponse = guessed.nextInt();
+                    response = guessed.nextInt();
                     guessCount++;
+
                 }
             } else {
                 outOfGuesses = true;
@@ -43,8 +44,7 @@ public class HighLow {
                 break;
             }
         }
-
-        if (secondResponse == num) {
+        if (response == num) {
             System.out.println("Correct, Good Guess.");
         }
     }
