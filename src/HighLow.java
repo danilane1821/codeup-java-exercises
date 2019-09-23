@@ -21,7 +21,6 @@ public class HighLow {
         int response = guessed.nextInt();
         int guessCount = 1;
         int guessLimit = 3;
-        boolean outOfGuesses = false;
 
         while (response != num) {
             if (guessCount < guessLimit) {
@@ -39,7 +38,6 @@ public class HighLow {
 
                 }
             } else {
-                outOfGuesses = true;
                 System.out.println("Sorry! You ran out of guesses.");
                 break;
             }
