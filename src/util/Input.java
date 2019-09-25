@@ -6,8 +6,20 @@ public class Input {
 private Scanner scanner;
 
 public Input () {
-this.scanner = new Scanner (System.in);
+this.scanner = new Scanner(System.in);
 }
+
+    public static void main(String[] args) {
+        Input sc = new Input();
+
+        System.out.println(sc.getString());
+        System.out.println(sc.yesNo());
+        System.out.println(sc.getInt(1,10));
+        System.out.println(sc.getDouble(1,10));
+        System.out.println(sc.getInt());
+        System.out.println(sc.getDouble());
+    }
+
 
 boolean yesNo () {
     System.out.println("Y/N?");
@@ -26,7 +38,8 @@ boolean yesNo () {
     }
 
 
-   int getInt(int min, int max) {
+
+    int getInt(int min, int max) {
        System.out.println("Please enter a number");
         if (scanner.hasNextInt()) {
             int numInput = scanner.nextInt();
@@ -64,14 +77,18 @@ boolean yesNo () {
         return 0;
     }
 
+    int getInt () {
+        System.out.println("enter a number");
+        return this.scanner.nextInt();
 
-    public static void main(String[] args) {
-        Input sc = new Input();
-        System.out.println(sc.getString());
-        System.out.println(sc.yesNo());
-        System.out.println(sc.getInt(1,10));
-        System.out.println(getDouble(1,10));
     }
+
+    double getDouble () {
+        System.out.println("enter a number");
+        return this.scanner.nextDouble();
+    }
+
+
 
 
 }
