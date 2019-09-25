@@ -19,16 +19,24 @@ public boolean yesNo () {
 
 }
 
-    public String getString () {
-        System.out.println("enter message");
+    private String getString () {
+
         return this.scanner.nextLine();
+    }
+
+    public String getString (String prompt) {
+        if(prompt.isEmpty()) {
+            System.out.println("enter message");
+        }else{
+            System.out.println(prompt);
+        }
+        return getString();
     }
 
 
 
     public int getInt(int min, int max) {
-       System.out.println("Please enter a number");
-        int number = Integer.parseInt(this.scanner.nextLine());
+        int number = getInt("Give me a number");
         if(number >=min && number <= max) {
             return number;
         } else {
@@ -39,8 +47,7 @@ public boolean yesNo () {
 
 
     double getDouble(double min, double max) {
-        System.out.println("Please enter a number");
-        Double number = Double.parseDouble(this.scanner.nextLine());
+        Double number = getDouble("Give me a decimal");
         if(number >=min && number <= max) {
             return number;
         } else {
@@ -49,15 +56,15 @@ public boolean yesNo () {
         return getDouble(min, max);
     }
 
-    public int getInt () {
-        System.out.println("enter a decimal number");
+    public int getInt (String prompt) {
+        System.out.println(prompt);
        return Integer.parseInt(this.scanner.nextLine());
 
 
     }
 
-    public double getDouble () {
-        System.out.println("enter a number with a decimal");
+    public double getDouble (String prompt) {
+        System.out.println(prompt);
         return Double.parseDouble(this.scanner.nextLine());
     }
 
