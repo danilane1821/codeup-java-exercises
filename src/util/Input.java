@@ -9,86 +9,57 @@ public Input () {
 this.scanner = new Scanner(System.in);
 }
 
-    public static void main(String[] args) {
-        Input sc = new Input();
-
-        System.out.println(sc.getString());
-        System.out.println(sc.yesNo());
-        System.out.println(sc.getInt(1,10));
-        System.out.println(sc.getDouble(1,10));
-        System.out.println(sc.getInt());
-        System.out.println(sc.getDouble());
-    }
 
 
-boolean yesNo () {
+
+public boolean yesNo () {
     System.out.println("Y/N?");
-   if(this.scanner.nextLine().equalsIgnoreCase("y")){
-
-       return true;
-   }else {
-       return false;
-   }
+    String answer = this.scanner.nextLine();
+   return answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes");
 
 }
 
-    String getString () {
+    public String getString () {
         System.out.println("enter message");
         return this.scanner.nextLine();
     }
 
 
 
-    int getInt(int min, int max) {
+    public int getInt(int min, int max) {
        System.out.println("Please enter a number");
-        if (scanner.hasNextInt()) {
-            int numInput = scanner.nextInt();
-            if (numInput >= min && numInput <= max) {
-                System.out.println(numInput + " is between 1 & 10!");
-                return numInput;
-            } else if (numInput < min || numInput > max) {
-                System.out.println("This number is not valid, enter another number: ");
-                return getInt(min, max);
-            }
+        int number = Integer.parseInt(this.scanner.nextLine());
+        if(number >=min && number <= max) {
+            return number;
         } else {
-            System.out.println("not a valid input! Enter a valid number: ");
-
+            System.out.println("Out of range");
         }
-        return 0;
+        return getInt(min, max);
     }
-
 
 
     double getDouble(double min, double max) {
         System.out.println("Please enter a number");
-        if (scanner.hasNextDouble()) {
-            double numInput = scanner.nextDouble();
-            if (numInput >= min && numInput <= max) {
-                System.out.println(numInput + " is between 1 & 10!");
-                return numInput;
-            } else if (numInput < min || numInput > max) {
-                System.out.println("This number is not valid, enter another number: ");
-                return getDouble(min, max);
-            }
+        Double number = Double.parseDouble(this.scanner.nextLine());
+        if(number >=min && number <= max) {
+            return number;
         } else {
-            System.out.println("not a valid input! Enter a valid number: ");
-
+            System.out.println("Out of range");
         }
-        return 0;
+        return getDouble(min, max);
     }
 
-    int getInt () {
-        System.out.println("enter a number");
-        return this.scanner.nextInt();
+    public int getInt () {
+        System.out.println("enter a decimal number");
+       return Integer.parseInt(this.scanner.nextLine());
+
 
     }
 
-    double getDouble () {
-        System.out.println("enter a number");
-        return this.scanner.nextDouble();
+    public double getDouble () {
+        System.out.println("enter a number with a decimal");
+        return Double.parseDouble(this.scanner.nextLine());
     }
-
-
 
 
 }
