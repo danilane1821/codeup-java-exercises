@@ -6,10 +6,10 @@ public class Movie {
     private String movieName;
     private String movieCategory;
 
-    public Movie (String name, String movieCategory) {
+    public Movie (String name, String movieCat) {
 
     setMovieName(name);
-    setMovieCategory(movieCategory);
+    setMovieCategory(movieCat);
 
     }
 
