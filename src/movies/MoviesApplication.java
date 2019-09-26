@@ -7,7 +7,6 @@ public class MoviesApplication {
     public static void main(String[] args) {
         Input userInput = new Input();
 
-        displayMenu();
         int choice;
         boolean willContinue;
         do {
