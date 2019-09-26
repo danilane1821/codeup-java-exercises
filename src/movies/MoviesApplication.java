@@ -8,12 +8,8 @@ public class MoviesApplication {
         Input userInput = new Input();
 
         displayMenu();
-
-
         int choice;
         boolean willContinue;
-
-
         do {
             displayMenu();
             choice = userInput.getInt(0,5);
@@ -25,7 +21,6 @@ public class MoviesApplication {
 
 
 
-
         public static boolean processChoice (int choice) {
         boolean output = true;
             switch (choice) {
@@ -34,43 +29,26 @@ public class MoviesApplication {
                     output = false;
                     break;
                 case 1:
-                    for (Movie movie : MoviesArray.findAll()) {
-                        System.out.println(movie.getMovieName());
+                    displayMovies();
                         break;
-                    }
+
                 case 2:
 
-                    for (Movie movie : MoviesArray.findAll()) {
-                        if(movie.getMovieCategory().equalsIgnoreCase("animated")) {
-                            System.out.println(movie.getMovieName() + "--" + movie.getMovieCategory());
-                        }
-                    }
+                       displayMovies("animated");
                     break;
                 case 3:
 
-                    for (Movie movie : MoviesArray.findAll()) {
-                        if(movie.getMovieCategory().equalsIgnoreCase("drama")) {
-                            System.out.println(movie.getMovieName() + "--" + movie.getMovieCategory());
-                        }
-                    }
+                    displayMovies("drama");
                     break;
 
                 case 4:
 
-                    for (Movie movie : MoviesArray.findAll()) {
-                        if(movie.getMovieCategory().equalsIgnoreCase("horror")) {
-                            System.out.println(movie.getMovieName() + "--" + movie.getMovieCategory());
-                        }
-                    }
+                    displayMovies("horror");
                     break;
 
                 case 5:
 
-                    for (Movie movie : MoviesArray.findAll()) {
-                        if(movie.getMovieCategory().equalsIgnoreCase("scifi")) {
-                            System.out.println(movie.getMovieName() + "--" + movie.getMovieCategory());
-                        }
-                    }
+                   displayMovies("scifi");
                     break;
 
             }
@@ -88,5 +66,24 @@ public class MoviesApplication {
                     "5 - view movies in the scifi category");
         }
 
+        public static void displayMovies(){
+            String output = "";
+            for(Movie movie: MoviesArray.findAll()){
+                output += String.format("%s -- %s%n",movie.getMovieName(),movie.getMovieCategory());
+
+            }
+            System.out.println(output);
+        }
+
+    public static void displayMovies(String category){
+        String output = "";
+        for(Movie movie: MoviesArray.findAll()){
+            if(category.equalsIgnoreCase(movie.getMovieCategory())) {
+                output += String.format("%s -- %s%n", movie.getMovieName(), movie.getMovieCategory());
+            }
+
+        }
+        System.out.println(output);
+    }
 
 }
