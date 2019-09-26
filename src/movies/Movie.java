@@ -8,8 +8,12 @@ public class Movie {
 
     public Movie (String name, String movieCat) {
 
-    setMovieName(name);
-    setMovieCategory(movieCat);
+//    setMovieName(name);
+//    setMovieCategory(movieCat);
+
+    this.movieName = name;
+    this.movieCategory = movieCat;
+
 
     }
 
