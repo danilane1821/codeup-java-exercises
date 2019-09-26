@@ -17,5 +17,19 @@ public class ServerNameGenerator {
         System.out.println(randomWords());
     }
 
+    //This way below makes more sense and is more dynamic -->
+
+    // public static String returnRandEle(String[] arr) {
+    //        int index = (int)(Math.random() * ((arr.length - 1) + 1));
+    //        return arr[index];
+    //    }
+    //
+    //    public static void main(String[] args) {
+    //
+    //        String message = String.format("%s-%s", returnRandEle(adjectives), returnRandEle(nouns));
+    //        System.out.println(message);
+    //
+    //    }
+
 }
 
