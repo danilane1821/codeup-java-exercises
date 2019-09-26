@@ -11,7 +11,7 @@ public class ArraysExercises {
     public static void main(String[] args) {
 //What happens when you run the following code? why is Arrays.toString necessary?
         int[] numbers = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.toString(numbers));
+//        System.out.println(Arrays.toString(numbers));
 
 
 //It returns [I@2f7c7260 without toString method instead of the numbers [1,2,3,4,5].
@@ -21,10 +21,13 @@ public class ArraysExercises {
         people[1] = new Person("Bev");
         people[2] = new Person("Eddy");
 //Iterate through the array and print out the name of each person in the array.
+
+        people = addPerson(people, new Person("bob"));
+        people = addPerson(people, new Person("john"));
         for (Person people : people) {
             System.out.println(people.getName());
         }
-        addPerson(people, new Person("bob"));
+
 
 
 
@@ -56,12 +59,10 @@ public class ArraysExercises {
 // as well as a single person object to add to the passed array.
 //It should return an array whose length is 1 greater than the passed array, with the passed person object at the end of the array.
 
-    public static void addPerson(Person[] people, Person newPeople) {
+    public static Person[] addPerson(Person[] people, Person newPeople) {
         Person[] newList = Arrays.copyOf(people, people.length + 1);
         newList[newList.length - 1] = newPeople;
-        for (Person Person : newList) {
-            System.out.println(Person.getName());
-        }
+        return newList;
 
     }
 
