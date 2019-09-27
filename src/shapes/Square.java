@@ -2,13 +2,15 @@ package shapes;
 
 public class Square extends Quadrilateral{
     @Override
-    public void setwidth(double num) {
-
+    public void setwidth(double width) {
+        super.width = width;
+        super.length = width;
     }
 
     @Override
-    public void setLength(double num) {
-
+    public void setLength(double length) {
+        super.length = length;
+        super.width = length;
     }
 
     @Override
