@@ -3,9 +3,9 @@ package shapes;
 public class ShapesTest {
     public static void main(String[] args) {
 
-        Rectangle box1 = new Rectangle(4.0,5.0);
-        Rectangle box2 = new Square(5.0);
-        Square box3 = new Square(4.8);
+        Rectangle box1 = new Rectangle(5,4);
+        Rectangle box2 = new Square(5);
+        Square box3 = new Square(4);
 //        Square box4 = new Rectangle(2,1.0); // square cant be made into a rectangle because rectangle
 //        // is the parent because its implied its already a rectangle.
 

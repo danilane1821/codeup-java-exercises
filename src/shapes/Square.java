@@ -8,11 +8,11 @@ public class Square extends Rectangle {
 
     @Override
     public double getArea() {
-        return 4 * this.length;
+        return Math.pow(super.length,2);
     }
 
     @Override
     public double getPerimeter() {
-        return 4 * this.length * this.length;
+        return 4 * super.length;
     }
 }
