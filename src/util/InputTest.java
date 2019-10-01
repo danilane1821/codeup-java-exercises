@@ -13,8 +13,8 @@ public class InputTest {
 //            System.out.println(test.getInt(""));
 //            System.out.println(test.getDouble(""));
 
-//            test.getInt();
-//            test.getDouble();
+            test.getInt();
+            test.getDouble();
             System.out.println(test.getBinary());
             System.out.println(test.getHex());
 

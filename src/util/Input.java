@@ -63,16 +63,15 @@ public boolean yesNo () {
 //    }
 
     public int getInt () {
-        int number;
         try {
-            number = Integer.valueOf(getString("Enter a whole number"));
+           return Integer.valueOf(getString("Enter a number"));
 
         } catch (NumberFormatException e){
             System.out.println("Invalid input");
-            e.printStackTrace();
+//            e.printStackTrace();
             return getInt();
         }
-        return number;
+
     }
 
 //    public double getDouble (String prompt) {
@@ -81,15 +80,14 @@ public boolean yesNo () {
 //    }
 
     public double getDouble () {
-     double number;
+
      try{
-         number = Double.valueOf(getString("Enter a decimal number"));
+         return Double.valueOf(getString("Enter a decimal number"));
      }catch(NumberFormatException e){
          System.out.println("Invalid input");
 //         e.printStackTrace();
          return getDouble();
      }
-     return number;
     }
 
     public int getBinary () {
@@ -99,7 +97,7 @@ public boolean yesNo () {
 
         }catch(NumberFormatException e){
             e.printStackTrace();
-            return  getBinary();
+            return getBinary();
         }
         System.out.print("Your number is: ");
         return num;
@@ -112,7 +110,7 @@ public boolean yesNo () {
             num = Integer.valueOf(getString("Enter a hexadecimal number"), 16);
         }catch(NumberFormatException e){
             e.printStackTrace();
-            return  getHex();
+            return getHex();
         }
         System.out.print("Your number is: ");
         return num;
