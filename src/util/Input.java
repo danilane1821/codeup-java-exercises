@@ -94,16 +94,27 @@ public boolean yesNo () {
 
     public int getBinary () {
         int num;
-        num = Integer.valueOf(getString("Enter a binary number"),2);
-        System.out.print("Your number in binary is: ");
+        try {
+            num = Integer.valueOf(getString("Enter a binary number"), 2);
+
+        }catch(NumberFormatException e){
+            e.printStackTrace();
+            return  getBinary();
+        }
+        System.out.print("Your number is: ");
         return num;
 
     }
 
     public int getHex () {
         int num;
-        num =  Integer.valueOf(getString("Enter a hexadecimal number"),16);
-        System.out.print("Your number in hexadecimal is: ");
+        try {
+            num = Integer.valueOf(getString("Enter a hexadecimal number"), 16);
+        }catch(NumberFormatException e){
+            e.printStackTrace();
+            return  getHex();
+        }
+        System.out.print("Your number is: ");
         return num;
     }
 
