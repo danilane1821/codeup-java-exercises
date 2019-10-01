@@ -36,7 +36,7 @@ public boolean yesNo () {
 
 
     public int getInt(int min, int max) {
-        int number = getInt("Give me a number");
+        int number = getInt();
         if(number >=min && number <= max) {
             return number;
         } else {
@@ -47,7 +47,7 @@ public boolean yesNo () {
 
 
     double getDouble(double min, double max) {
-        Double number = getDouble("Give me a decimal");
+        Double number = getDouble();
         if(number >=min && number <= max) {
             return number;
         } else {
@@ -56,16 +56,40 @@ public boolean yesNo () {
         return getDouble(min, max);
     }
 
-    public int getInt (String prompt) {
-        System.out.println(prompt);
-       return Integer.parseInt(this.scanner.nextLine());
+//    public int getInt (String prompt) {
+//        System.out.println(prompt);
+//       return Integer.parseInt(this.scanner.nextLine());
+//
+//    }
 
+    public int getInt () {
+        int number;
+        try {
+            number = Integer.valueOf(getString("Enter a whole number"));
 
+        } catch (Exception e){
+            System.out.println("Invalid input");
+//            e.printStackTrace();
+            return getInt();
+        }
+        return number;
     }
 
-    public double getDouble (String prompt) {
-        System.out.println(prompt);
-        return Double.parseDouble(this.scanner.nextLine());
+//    public double getDouble (String prompt) {
+//        System.out.println(prompt);
+//        return Double.parseDouble(this.scanner.nextLine());
+//    }
+
+    public double getDouble () {
+     double number;
+     try{
+         number = Double.valueOf(getString("Enter a decimal number"));
+     }catch(Exception e){
+         System.out.println("Invalid input");
+//         e.printStackTrace();
+         return getDouble();
+     }
+     return number;
     }
 
 
