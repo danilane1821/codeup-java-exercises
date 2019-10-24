@@ -8,7 +8,7 @@ public class Dog extends Animal{
         this.breed = breed;
         this.name = name;
     }
-
+//setters may not be needed
     public String getBreed() {
         return breed;
     }
